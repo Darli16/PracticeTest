@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on darwin)" generated="2025-02-02T02:33:09.779593" rpa="false" schemaversion="5">
+<suite id="s1" name="Grapevine" source="/Users/darli/PycharmProjects/PythonProject1/test/grapevine.robot">
+<test id="s1-t1" name="User should be able to search Ottawa" line="15">
+<kw name="Begin web test" owner="Common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-02T02:33:10.157216" level="INFO">Opening browser 'safari' to base url 'about:blank'.</msg>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-02T02:33:10.156793" elapsed="1.141777"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-02T02:33:11.299820" elapsed="0.063117"/>
+</kw>
+<status status="PASS" start="2025-02-02T02:33:10.155514" elapsed="1.208403"/>
+</kw>
+<kw name="Search for office in Ottawa" owner="GrapevineApp">
+<kw name="Open web page" owner="Homepage">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-02-02T02:33:11.367910" level="INFO">Opening url 'https://grapevine.ca/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-02-02T02:33:11.367493" elapsed="27.139510"/>
+</kw>
+<status status="PASS" start="2025-02-02T02:33:11.366851" elapsed="27.140392"/>
+</kw>
+<kw name="Verify page loaded" owner="Homepage">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${HOMEPAGE_IMAGE}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-02T02:33:38.507922" elapsed="0.018623"/>
+</kw>
+<status status="PASS" start="2025-02-02T02:33:38.507534" elapsed="0.019293"/>
+</kw>
+<kw name="Go to Ottawa listing page" owner="TopNav">
+<kw name="Click BUY link" owner="TopNav">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-02-02T02:33:38.528897" level="INFO">Clicking link '//*[@id="menu-item-113"]/a'.</msg>
+<arg>${BUY_MENU}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-02T02:33:38.528426" elapsed="0.065328"/>
+</kw>
+<status status="PASS" start="2025-02-02T02:33:38.527886" elapsed="0.066023"/>
+</kw>
+<kw name="Click Ottawa Listing link" owner="TopNav">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-02-02T02:33:38.594739" level="INFO">Clicking link 'https://grapevine.ca/ottawa-listings/'.</msg>
+<arg>${OTTAWA_LISTING_SUBMENU}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-02T02:33:38.594485" elapsed="0.030333"/>
+</kw>
+<status status="PASS" start="2025-02-02T02:33:38.594133" elapsed="0.030844"/>
+</kw>
+<kw name="Verify page loaded" owner="TopNav">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${OTTAWA_LISTING_HEADER}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-02T02:33:38.625741" elapsed="0.009211"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-02T02:33:48.638251" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-02T02:33:38.635207" elapsed="10.003316"/>
+</kw>
+<status status="PASS" start="2025-02-02T02:33:38.625283" elapsed="10.013522"/>
+</kw>
+<status status="PASS" start="2025-02-02T02:33:38.527185" elapsed="10.111813"/>
+</kw>
+<kw name="Search and filter for Ottawa" owner="OttawaListingPage">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-02-02T02:33:48.640779" level="INFO">Clicking link '//*[@id="post-114"]/div/div/div/div/div/div[1]/header/div[1]/div[2]/div/div[1]/a'.</msg>
+<arg>${SEARCH_FILTER_BUTTON}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-02T02:33:48.640277" elapsed="0.042659"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-02T02:33:48.683601" level="INFO">Typing text 'Ottawa' into text field '//*[@id="input_city"]'.</msg>
+<arg>${CITY_TEXT_BOX}</arg>
+<arg>${CITY_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-02T02:33:48.683205" elapsed="0.219139"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-02-02T02:33:48.904171" level="INFO">Selecting options from selection list 'input_property_type' by value Office.</msg>
+<arg>${PROPERTY_TYPE_DROPDOWN}</arg>
+<arg>${PROPERTY_TYPE_NAME}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-02-02T02:33:48.903312" elapsed="0.137146"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-02-02T02:33:49.041536" level="INFO">Selecting options from selection list 'input_province' by value Ontario.</msg>
+<arg>${PROVINCE_DROPDOWN}</arg>
+<arg>${PROVINCE_NAME}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-02-02T02:33:49.040910" elapsed="0.073282"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-02T02:33:49.114738" level="INFO">Clicking button 'Search'.</msg>
+<arg>${SEARCH_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-02T02:33:49.114446" elapsed="0.076455"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-02T02:33:59.192822" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-02T02:33:49.191354" elapsed="10.001731"/>
+</kw>
+<status status="PASS" start="2025-02-02T02:33:48.639552" elapsed="10.553804"/>
+</kw>
+<status status="PASS" start="2025-02-02T02:33:11.365101" elapsed="47.828455"/>
+</kw>
+<kw name="End web test" owner="Common" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-02T02:33:59.196351" elapsed="0.058271"/>
+</kw>
+<status status="PASS" start="2025-02-02T02:33:59.195458" elapsed="0.059785"/>
+</kw>
+<status status="PASS" start="2025-02-02T02:33:10.154385" elapsed="49.101524"/>
+</test>
+<doc>This is practice test</doc>
+<status status="PASS" start="2025-02-02T02:33:09.781678" elapsed="49.476773"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Grapevine">Grapevine</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
