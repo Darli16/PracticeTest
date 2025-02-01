@@ -4,7 +4,6 @@ Resource            ../Resources/Common.robot
 Resource            ../Resources/GrapevineApp.robot
 Test Setup          Common.Begin web test
 Test Teardown       Common.End web test
-Library             SeleniumLibrary
 
 #robot -d result test/grapevine.robot
 *** Variables ***
